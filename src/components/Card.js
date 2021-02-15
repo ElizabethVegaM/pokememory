@@ -1,8 +1,8 @@
-const Card = (props) => {
+const Card = (data) => {
   const el = document.createElement('div');
 
   el.className = 'card';
-  el.textContent = 'Soy una card';
+  el.innerHTML = `<img src="${data.image}" alt="${data.id}"></div>`;
 
   return el;
 };

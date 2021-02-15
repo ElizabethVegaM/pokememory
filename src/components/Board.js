@@ -1,8 +1,13 @@
-const Board = () => {
-  const el = document.createElement('div');
+import Card from './Card.js';
 
+const Board = (props) => {
+  const data = props.map(el =>Card(el))
+  const el = document.createElement('div');
   el.className = 'board';
-  el.textContent = 'Hola soy el tablero!';
+
+  for (let i = 0; i < data.length; i++) {
+    el.innerHTML += data[i].outerHTML;
+  }
 
   return el;
 };
