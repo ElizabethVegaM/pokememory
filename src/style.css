@@ -54,6 +54,10 @@ body {
   box-shadow: 10px 10px 14px -6px rgba(128, 128, 128, 1);
 }
 
+.active {
+  transform: rotateY(0deg);
+}
+
 .card img {
   padding-top: 30px;
 }
