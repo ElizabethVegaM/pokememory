@@ -6,7 +6,6 @@ const Board = (props) => {
   const el = document.createElement('div');
   el.className = 'board';
 
-
   for (let i = 0; i < data.length; i++) {
     el.innerHTML += data[i].outerHTML;
   }
