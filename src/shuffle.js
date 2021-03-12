@@ -1,16 +1,14 @@
 const shuffle = (array) => {
-  const copyArr = [];
-  for(let i = array.length - 1; i > 0; i--){
-    const j = Math.floor(Math.random() * i);
-    console.log('j', j);
-    const temp = array[i];
-    console.log('temp before changing', temp)
-    array[i] = array[j];
-    console.log('array[i] after = array[j]', array[i]);
-    copyArr.push(array[i]);
-    array[j] = temp;
-    console.log('array[j] after = temp', array[j]);
-    console.log(' final temp', temp)
+  const copyArr = array.slice();
+  for(let i = copyArr.length - 1; i >= 0; i--){
+    // Selects a random position from the array
+    const randomPosition = Math.floor(Math.random() * i);
+    // Temporal variable is the current element of array (given by for loop)
+    const temp = copyArr[i];
+
+    copyArr[i] = copyArr[randomPosition];
+    // Element of array in random position is pushed to a new array
+    copyArr[randomPosition] = temp;
   }
   return copyArr;
 }

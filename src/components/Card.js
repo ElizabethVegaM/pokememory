@@ -1,7 +1,7 @@
 const Card = (data) => {
   const el = document.createElement('div');
   el.className = 'card';
-  el.id = data.id;
+  el.dataset.name = data.id;
 
   const front = document.createElement('div')
   front.className = 'card-front';
