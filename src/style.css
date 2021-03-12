@@ -36,7 +36,7 @@ body {
   justify-content: space-evenly;
   flex-direction: row;
   flex-wrap: wrap;
-  padding: 50px;
+  padding: 0 25px;
 }
 
 .card {
@@ -68,10 +68,6 @@ body {
 
 .active {
   transform: rotateY(180deg);
-}
-
-.inactive {
-  transform: rotateY(0deg);
 }
 
 .card-back {

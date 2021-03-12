@@ -1,8 +1,10 @@
 import Card from './Card.js';
+import shuffle from '../shuffle.js';
 
 const Board = (props) => {
   console.log(props)
-  const data = props.map(el =>Card(el))
+  const shuffleArr = shuffle(props);
+  const data = shuffleArr.map(el =>Card(el))
   const el = document.createElement('div');
   el.className = 'board';
 
