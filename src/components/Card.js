@@ -14,11 +14,21 @@ const Card = (data) => {
   el.appendChild(front);
   el.appendChild(back);
 
-  // el.addEventListener('click', (event) => {
-  //   console.log(event.target);
-  //   console.log('hola' + data.id)
-  //   event.target.contain('active') ? event.target.classList.remove('active') : event.target.classList.add('active');
+  // cards.forEach(element => {
+  //   element.addEventListener('click', (event) => {
+  //     const target = event.currentTarget;
+  //     event.preventDefault();
+  //     event.stopPropagation();
+  //     target.classList.contains('active') ? target.classList.remove('active') : target.classList.add('active');
+  //   })
   // });
+  el.addEventListener('click', (event) => {
+    const target = event.currentTarget;
+    event.stopPropagation();
+    event.preventDefault();
+    target.classList.contains('active') ? target.classList.remove('active') : target.classList.add('active');
+  })
+
   return el;
 };
 

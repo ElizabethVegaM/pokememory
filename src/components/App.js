@@ -20,7 +20,7 @@ const App = () => {
   const el = document.createElement('div');
 
   el.className = 'App';
-  const arrCopy = pokemon.items;
+  const arrCopy = pokemon.items.slice();
   pokemon.items.forEach(el => arrCopy.push(el));
 
   el.appendChild(Header());
