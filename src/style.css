@@ -1,6 +1,7 @@
 body {
   margin: 0;
   padding: 0;
+  font-family: 'Ranchers', cursive;
 }
 
 .App {
@@ -31,7 +32,13 @@ body {
   padding: 10px;
 }
 
-.board {
+.info-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.cards-container {
   display: flex;
   justify-content: space-evenly;
   flex-direction: row;
@@ -72,7 +79,6 @@ body {
 
 .blocked {
   transform: rotateY(180deg);
-  border: 1px solid black;
 }
 
 .card-back {

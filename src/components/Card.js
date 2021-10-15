@@ -1,11 +1,11 @@
-const Card = (data, clickFx) => {
+const Card = (data) => {
   const el = document.createElement('div');
   el.className = 'card';
   el.dataset.name = data.id;
 
   const front = document.createElement('div')
   front.className = 'card-front';
-  front.innerHTML = '<img src="./img/pokememory-logo.png">';
+  front.innerHTML = '<img src="./img/pokemon-egg.png">';
 
   const back = document.createElement('div');
   back.className = 'card-back';
@@ -14,13 +14,6 @@ const Card = (data, clickFx) => {
 
   el.appendChild(front);
   el.appendChild(back);
-
-  // el.addEventListener('click', (event) => {
-  //   const target = event.currentTarget;
-  //   event.stopPropagation();
-  //   event.preventDefault();
-  //   target.classList.contains('active') ? target.classList.remove('active') : target.classList.add('active');
-  // })
 
   return el;
 };
