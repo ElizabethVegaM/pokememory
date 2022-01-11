@@ -9,7 +9,7 @@ Este proyecto fue creado como implementación modelo para el bootcamp de [Labora
 
 * HTML
 * CSS
-* JavaScript _vanilla_
+* JavaScript ES6
 
 
 ## Despliegue 📦
